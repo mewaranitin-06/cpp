@@ -1,0 +1,72 @@
+#include <iostream>
+using namespace std;
+class Calculate 
+{
+    float principal , time , rate ;
+    float radius ;
+    float length , width ;
+    public :
+    void insertinterest ()
+    {
+        cout<<"Enter principle : ";
+        cin>> principal ;
+        cout<<"\nEnter time : ";
+        cin>>time ;
+        cout<<"\nEnter rate : ";
+        cin>>rate ;
+    }
+    void insertrectangle ()
+    {
+        cout<<"\nEnter lenght : ";
+        cin >> length ;
+        cout<<"\nEnter width : ";
+        cin >> width ;
+        
+    }
+    void insertradius ()
+    {
+        cout<<"\nEnter radius :";
+        cin>> radius ;
+    }
+    float area(float p,float r, float t)
+    {
+        return (p*r*t)/100;
+    }
+    float area(float l , float w)
+    {
+        return l*w;
+    }
+    float area( float r)
+    {
+        return 3.14 * r*r;
+    }
+    void display()
+    {
+        cout<<"\nSimple interest : "<<area(principal , rate , time );
+        cout<<"\nArea of rectangle  : "<<area(length, width );
+        cout<<"\nArea of circle  : "<<area(radius)<<endl;
+    }
+};
+int main()
+{
+    Calculate answer;
+    answer.insertinterest();
+    answer.insertrectangle();
+    answer.insertradius();
+    answer.display();
+    return 0;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
